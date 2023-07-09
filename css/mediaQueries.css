@@ -1,0 +1,330 @@
+/*Acá están los estilos que se aplican con cada tamaño de pantalla*/
+
+/*Media queries*/
+    /*Media queries teléfono*/
+
+    @media screen and (max-width:480px) {
+        
+    }
+    
+    @media screen and (max-width:425px) {
+        .imagenes {
+            flex-direction: column;
+        }
+        .servicios {
+            padding: 25px;
+        }
+
+
+        .navbar__logo {
+            width: 240px;
+            height: 72px;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        /*urgencias*/
+        .urgencias {
+            font-size: 0.5rem;
+        }
+    
+        .urgencias:hover {
+            font-size: 1rem;
+        }
+    
+        /*Carrousel*/
+        .carrouselContainer__Slides img {
+            height: 200px;
+        }
+    
+        /*Tabla de secciones*/
+        .secciones {
+            grid-template-columns: 100%;
+            gap: 5px;
+            padding: 10px;
+            align-items: unset;
+        }
+    
+        .subsec p {
+            /* text-align: center; */
+        }
+    
+        .subsec h3 {
+            display: grid;
+            height: 50px;
+            align-content: center;
+        }
+    
+        .botonSeccion-1 {
+            padding-top: 30px;
+            padding-bottom: 50px;
+        }
+    
+        .botonSeccion-2 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+        .botonSeccion-3 {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    
+        .horarioAtencion {
+            padding-bottom: 10px;
+        }
+    
+    
+        /*Comentarios*/
+        .comentarios {
+            height: 100%;
+            grid-template-columns: auto;
+            gap: 0px;
+            padding: 10px;
+        }
+    
+        .tarjeta {
+            width: 320px;
+            min-height: 200px;
+            border-bottom: solid 1px #4bae4f;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        /*Contacto*/
+    
+        .contacto {
+            width: 100%;
+            height: 250px;
+            display: block;
+            grid-template-columns: auto;
+            text-align: left;
+            background-color: #c91034;
+            color: #FFFFFF;
+            text-align: left;
+            justify-content: center;
+        }
+    
+        .contacto h3 {
+            padding-top: 20px;
+            padding-left: 1.65em;
+            text-align: left;
+        }
+    
+        .contacto p {
+            margin: auto;
+            text-align: left;
+            padding-top: 4px;
+        }
+    
+
+    
+        .contacto div {
+            text-align: center;
+            justify-content: center;
+            margin: 0px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            height: 0px;
+        }
+    
+        /*Footer*/
+    
+        .footer {
+            width: 100%;
+            height: auto;
+            display: grid;
+            gap: 1px;
+            grid-template-rows: 100%;
+            background-color: #e23549;
+            text-align: left;
+            justify-content: center;
+        }
+    
+        .logo_bottom {
+            text-align: left;
+            width: 320px;
+            text-align: center;
+            justify-content: center;
+        }
+    
+        .logo_bottom img {
+            width: 100px;
+            height: auto;
+        }
+    
+        .socialmedia {
+            display: inline-block;
+            width: 60px;
+            height: 40px;
+            text-align: right;
+        }
+
+
+    }
+    
+
+    /*Media queries tablet*/
+    @media screen and (min-width:768px) {
+        .odontologos {
+            display: grid;
+            grid-template-columns: unset;
+            gap: 15px;
+
+            text-align: center;
+            justify-content: space-evenly;
+            justify-content: center;
+            margin: 20px;
+        }
+        .odontologos img {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+
+        .imagenes {
+            height: auto;
+        }
+        .imagen {
+            width: 33.3%;
+            height:300px;
+        }
+
+        .serv{
+            width: 95%;
+            align-content: space-between;
+            grid-template-rows: auto auto auto;
+        }
+        .servicios {
+            padding: 20px;
+        }
+
+
+        .secciones {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            height: fit-content;
+            gap:inherit;
+            padding: 10px;
+            align-items: flex-start;
+            
+        }
+        .subsec h3 {
+            display: grid;
+            height: 50px;
+            align-content: center;
+        }
+        .tarjeta {
+            display: inline;
+            width: 320px;
+            min-height: 150px;
+            margin: 2px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 3px;
+        }
+
+        .botonSeccion-1 {
+            padding-top: 127px;
+            padding-bottom: 10px;
+        }
+        .botonSeccion-3 {
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+        .horarioAtencion p{
+            padding-bottom: 10px;
+        }
+        .contacto {
+            height: 215px;
+        }
+    
+        .footer {
+            display: grid;
+            gap: 1px;
+            grid-template-rows: 100%;
+            background-color: #e23549;
+            text-align: left;
+            justify-content: center;
+        }
+        .logo_bottom {
+            text-align: left;
+            width: 320px;
+            text-align: center;
+            justify-content: center;
+        }
+    
+        .logo_bottom img {
+            width: 100px;
+            height: auto;
+        }
+        
+    
+        .socialmedia {
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            text-align: right;
+        }
+    }
+    
+    /*Media queries PC escritorio*/
+    @media screen and (min-width:1024px) {
+        .odontologos{
+            grid-template-columns: repeat(3, 300px);
+        }
+        .serv{
+            width: 300px;
+            align-content: space-between;
+        }
+        .servicios {
+            padding: 20px;
+        }
+
+
+        .secciones {
+            align-items: stretch;
+        }
+        .botonSeccion-1 {
+            padding-top: 143px;
+            padding-bottom: 0px;
+        }
+        .botonSeccion-2 {
+            padding-top: 220px;
+            padding-bottom: 0px;
+        }
+
+        .tarjeta {
+            width: 320px;
+        }
+        
+        .contacto {
+            height: 145px;
+        }
+        .logo_bottom img {
+            width: 150px;
+        }
+
+    }
+    @media screen and (min-width:1440px) {
+        .botonSeccion-1 {
+            padding-top: 135px;
+            padding-bottom: 0px;
+        }.botonSeccion-2 {
+            padding-top: 250px;
+            padding-bottom: 0px;
+        }
+        .botonSeccion-3 {
+            padding-top: 20px;
+            padding-bottom: 0px;
+        }
+        .tarjeta {
+            width: 320px;
+        }
+        .comentarios p {
+            padding-left: 2.1em;
+            padding-right: 2em;
+            padding-top: 1.7em;
+            padding-bottom: 1em;
+        }
+    }
+    

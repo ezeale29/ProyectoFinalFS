@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Aca están los estilos que se aplican a la barra de navegacion.*/
+header {
+    background-color: #a50924;
+    background-image: linear-gradient(180deg);
+}
+
+h1 {
+    display: none;
+}
+
+h2 {
+    display: none;
+}
+
+.NavContainer {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.navbar {
+    --state-close: scale(0);
+    --state-burger: scale(1);
+    --state-menu: translate(-100%);
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(2, max-content);
+}
+
+.navbar a {
+    background-image: linear-gradient(to right, #FFFFFf, #FFFFFf 50%, #070707 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:before {
+    left: 0;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-position: 0;
+    font-size: 17px;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar:target {
+    --state-close: scale(1);
+    --state-burger: scale(0);
+    --state-menu: translate(0);
+}
+
+.navbar__logo {
+    border-radius: 15px;
+    width: 150px;
+    height: 70px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+}
+
+.navbar__burger,
+.navbar__close {
+    cursor: pointer;
+    grid-column: -2/-1;
+    grid-row: 1/2;
+    transition: .3s transform;
+}
+
+.navbar__burger {
+    transform: var(--state-burger);
+}
+
+.navbar__close {
+    transform: var(--state-close);
+    z-index: 5;
+    position: fixed;
+}
+
+.navbar__icon {
+    width: 40px;
+}
+
+.navbar__links {
+    background-image: linear-gradient(#4bae4f, #7acb5a);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    z-index: 5;
+    display: grid;
+    align-content: center;
+    gap: 2em;
+    padding-left: 5%;
+
+    transform: var(--state-menu);
+    transition: .3s transform;
+}
+
+.navbar__item {
+    list-style: none;
+}
+
+.navbar__link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+#actualPage {
+    background-image: linear-gradient(to right, white, white);
+    font-weight: 1000;
+    transition: .5;
+}
+
+
+
+/*Media Queries*/
+@media (max-width:1080px) {}
+
+@media (min-width:768px) {
+    .navbar {
+        --state-burger: scale(0);
+        --state-menu: translate(0);
+    }
+
+    .navbar:target {
+        --state-close: scale(0);
+    }
+
+    .navbar__links {
+        padding: 0;
+        background-image: unset;
+        background-color: unset;
+        position: unset;
+        grid-auto-flow: column;
+        transform: unset;
+        grid-column: -2/-1;
+        grid-row: 1/2;
+    }
+
+    .navbar__link {
+        font-size: 1rem;
+        letter-spacing: none;
+    }
+
+}
+
+@media (max-width:320px) {
+    .navbar__logo {
+        width: 7rem;
+        height: 3rem;
+    }
+}
